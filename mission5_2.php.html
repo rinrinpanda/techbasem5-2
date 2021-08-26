@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://tech-base.net/tb-230235/Editor/ -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="ace-twilight">.ace-twilight .ace_gutter {background: #232323;color: #E2E2E2}.ace-twilight .ace_print-margin {width: 1px;background: #232323}.ace-twilight {background-color: #141414;color: #F8F8F8}.ace-twilight .ace_cursor {color: #A7A7A7}.ace-twilight .ace_marker-layer .ace_selection {background: rgba(221, 240, 255, 0.20)}.ace-twilight.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #141414;}.ace-twilight .ace_marker-layer .ace_step {background: rgb(102, 82, 0)}.ace-twilight .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(255, 255, 255, 0.25)}.ace-twilight .ace_marker-layer .ace_active-line {background: rgba(255, 255, 255, 0.031)}.ace-twilight .ace_gutter-active-line {background-color: rgba(255, 255, 255, 0.031)}.ace-twilight .ace_marker-layer .ace_selected-word {border: 1px solid rgba(221, 240, 255, 0.20)}.ace-twilight .ace_invisible {color: rgba(255, 255, 255, 0.25)}.ace-twilight .ace_keyword,.ace-twilight .ace_meta {color: #CDA869}.ace-twilight .ace_constant,.ace-twilight .ace_constant.ace_character,.ace-twilight .ace_constant.ace_character.ace_escape,.ace-twilight .ace_constant.ace_other,.ace-twilight .ace_heading,.ace-twilight .ace_markup.ace_heading,.ace-twilight .ace_support.ace_constant {color: #CF6A4C}.ace-twilight .ace_invalid.ace_illegal {color: #F8F8F8;background-color: rgba(86, 45, 86, 0.75)}.ace-twilight .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #D2A8A1}.ace-twilight .ace_support {color: #9B859D}.ace-twilight .ace_fold {background-color: #AC885B;border-color: #F8F8F8}.ace-twilight .ace_support.ace_function {color: #DAD085}.ace-twilight .ace_list,.ace-twilight .ace_markup.ace_list,.ace-twilight .ace_storage {color: #F9EE98}.ace-twilight .ace_entity.ace_name.ace_function,.ace-twilight .ace_meta.ace_tag,.ace-twilight .ace_variable {color: #AC885B}.ace-twilight .ace_string {color: #8F9D6A}.ace-twilight .ace_string.ace_regexp {color: #E9C062}.ace-twilight .ace_comment {font-style: italic;color: #5F5A60}.ace-twilight .ace_variable {color: #7587A6}.ace-twilight .ace_xml-pe {color: #494949}.ace-twilight .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWMQERFpYLC1tf0PAAgOAnPnhxyiAAAAAElFTkSuQmCC) right repeat-y}
+/*# sourceURL=ace/css/ace-twilight */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style id="ace_editor.css">.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_editor {position: relative;overflow: hidden;padding: 0;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;box-sizing: border-box;min-width: 100%;contain: style size layout;font-variant-ligatures: no-common-ligatures;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;contain: style size layout;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {position: absolute;top: 0;left: 0;right: 0;padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {contain: strict;position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;contain: strict;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: transparent;color: inherit;z-index: 1000;opacity: 1;}.ace_composition_placeholder { color: transparent }.ace_composition_marker { border-bottom: 1px solid;position: absolute;border-radius: 0;margin-top: 1px;}[ace_nocontext=true] {transform: none!important;filter: none!important;clip-path: none!important;mask : none!important;contain: none!important;perspective: none!important;mix-blend-mode: initial!important;z-index: auto;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;height: 1000000px;contain: style size layout;}.ace_text-layer {font: inherit !important;position: absolute;height: 1000000px;width: 1000000px;contain: style size layout;}.ace_text-layer > .ace_line, .ace_text-layer > .ace_line_group {contain: style size layout;position: absolute;top: 0;left: 0;right: 0;}.ace_hidpi .ace_text-layer,.ace_hidpi .ace_gutter-layer,.ace_hidpi .ace_content,.ace_hidpi .ace_gutter {contain: strict;will-change: transform;}.ace_hidpi .ace_text-layer > .ace_line, .ace_hidpi .ace_text-layer > .ace_line_group {contain: strict;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_hasPlaceholder .ace_hidden-cursors .ace_cursor {opacity: 0;}.ace_smooth-blinking .ace_cursor {transition: opacity 0.18s;}.ace_animate-blinking .ace_cursor {animation-duration: 1000ms;animation-timing-function: step-end;animation-name: blink-ace-animate;animation-iteration-count: infinite;}.ace_animate-blinking.ace_smooth-blinking .ace_cursor {animation-duration: 1000ms;animation-timing-function: ease-in-out;animation-name: blink-ace-animate-smooth;}@keyframes blink-ace-animate {from, to { opacity: 1; }60% { opacity: 0; }}@keyframes blink-ace-animate-smooth {from, to { opacity: 1; }45% { opacity: 1; }60% { opacity: 0; }85% { opacity: 0; }}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_error_bracket {position: absolute;border-bottom: 1px solid #DE5555;border-radius: 0;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;box-sizing: border-box;}.ace_line .ace_fold {box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_inline_button {border: 1px solid lightgray;display: inline-block;margin: -1px 8px;padding: 0 5px;pointer-events: auto;cursor: pointer;}.ace_inline_button:hover {border-color: gray;background: rgba(200,200,200,0.2);display: inline-block;pointer-events: auto;}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_mobile-menu {position: absolute;line-height: 1.5;border-radius: 4px;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;background: white;box-shadow: 1px 3px 2px grey;border: 1px solid #dcdcdc;color: black;}.ace_dark > .ace_mobile-menu {background: #333;color: #ccc;box-shadow: 1px 3px 2px grey;border: 1px solid #444;}.ace_mobile-button {padding: 2px;cursor: pointer;overflow: hidden;}.ace_mobile-button:hover {background-color: #eee;opacity:1;}.ace_mobile-button:active {background-color: #ddd;}.ace_placeholder {font-family: arial;transform: scale(0.9);transform-origin: left;white-space: pre;opacity: 0.7;margin: 0 10px;}
+/*# sourceURL=ace/css/ace_editor.css */</style>
+    <script src="./mission5_2.php_files/ace.min.js.ダウンロード" crossorigin="anonymous" integrity="sha256-T5QdmsCQO5z8tBAXMrCZ4f3RX8wVdiA0Fu17FGnU1vU="></script>
+    <script src="./mission5_2.php_files/theme-twilight.min.js.ダウンロード" crossorigin="anonymous"></script>
+    <script src="./mission5_2.php_files/php.min.js.ダウンロード" crossorigin="anonymous"></script>
+    <script src="./mission5_2.php_files/mode-php.min.js.ダウンロード" crossorigin="anonymous"></script>
+    <script src="./mission5_2.php_files/axios.min.js.ダウンロード"></script>
+    <link href="./mission5_2.php_files/css" rel="stylesheet">
+    <link href="./mission5_2.php_files/materialdesignicons.min.css" rel="stylesheet">
+    <link href="./mission5_2.php_files/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    
+    <title>コードエディタ</title>
+<style type="text/css" id="vuetify-theme-stylesheet">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style></head>
+
+
+    <body>
+        <div id="app"><div data-app="true" class="v-application v-application--is-ltr theme--light" id="app" style=""><div class="v-application--wrap"><header class="v-sheet theme--light v-toolbar v-app-bar v-app-bar--fixed light-blue" style="height: 56px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;" data-booted="true"><div class="v-toolbar__content" style="height: 56px;"><div class="row justify-center" style="height: 64px;"><div class="v-image v-responsive mt-2 pa-0 theme--light" style="max-height: 7vh; max-width: 40vw;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;https://tech-base.net/tb-230235/Editor/LOGO_A2.png&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 3445px;"></div></div></div></div></header> <main class="v-main" style="padding: 56px 0px 0px;" data-booted="true"><div class="v-main__wrap"><div class="container container--fluid"><div class="row"><div class="col col-4"><div class="v-card v-card--flat v-sheet theme--light rounded-0" outline="" style="height: calc(100vh - 64px); width: 66.6vw; overflow: scroll;"><header class="v-sheet theme--light v-toolbar v-toolbar--dense" style="height: 48px;"><div class="v-toolbar__content" style="height: 48px;"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"><!----></div> <div class="spacer"></div> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-export-variant theme--light"></i></span></button> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-content-save theme--light"></i></span></button> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-right-drop-circle theme--light"></i></span></button></div></header> <div class="v-treeview theme--light"><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light"></i></div><div class="v-treeview-node__label">
+                                            mission1
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"><!----></div></div></div></div></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light"></i></div><div class="v-treeview-node__label">
+                                            mission2
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"><!----></div></div></div></div></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light"></i></div><div class="v-treeview-node__label">
+                                            mission3
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"><!----></div></div></div></div></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light"></i></div><div class="v-treeview-node__label">
+                                            mission4
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"><!----></div></div></div></div></div><div aria-expanded="true" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light v-treeview-node__toggle--open"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder-open theme--light"></i></div><div class="v-treeview-node__label">
+                                            mission5
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"></div></div></div></div><div class="v-treeview-node__children"><div aria-expanded="false" class="v-treeview-node v-treeview-node--leaf v-treeview-node--click"><div class="v-treeview-node__root"><div class="v-treeview-node__level"></div><div class="v-treeview-node__level"></div><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-language-php theme--light"></i></div><div class="v-treeview-node__label">
+                                            mission5-1forcheck.php
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"><!----></div></div></div></div></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--leaf v-treeview-node--click"><div class="v-treeview-node__root"><div class="v-treeview-node__level"></div><div class="v-treeview-node__level"></div><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-language-php theme--light"></i></div><div class="v-treeview-node__label">
+                                            mission5_1.php
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"><!----></div></div></div></div></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--leaf v-treeview-node--click"><div class="v-treeview-node__root v-treeview-node--active primary--text"><div class="v-treeview-node__level"></div><div class="v-treeview-node__level"></div><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-language-php theme--light"></i></div><div class="v-treeview-node__label">
+                                            mission5_2.php
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="true"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"></div></div></div></div></div></div></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--leaf v-treeview-node--click"><div class="v-treeview-node__root"><div class="v-treeview-node__level"></div><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-file-document-outline theme--light"></i></div><div class="v-treeview-node__label">
+                                            mission_1-27.txt
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"><!----></div></div></div></div></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light"></i></div><div class="v-treeview-node__label">
+                                            ひな形
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"><!----></div></div></div></div></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--leaf v-treeview-node--click"><div class="v-treeview-node__root"><div class="v-treeview-node__level"></div><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-language-html5 theme--light"></i></div><div class="v-treeview-node__label">
+                                            コードエディタ.html
+                                        </div><div class="v-treeview-node__append"><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" role="button" aria-haspopup="true" aria-expanded="false"><span class="v-btn__content"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button></span></button><div class="v-menu"><!----></div></div></div></div></div></div></div></div> <div class="mr-0 pr-0 col col-8"><!----> <div id="editor" class=" ace_editor ace-twilight ace_dark" draggable="false" style="font-size: 16pt;"><div style="position: absolute; top: 613px; left: 86.0859px; height: 26px;"></div><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px; height: 1px; width: 1px; top: 182px; left: 131px;"></textarea><div class="ace_gutter" aria-hidden="true" style="left: 0px; width: 57px;"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px; top: 0px; left: 0px; width: 57px;"><div class="ace_gutter-cell " style="height: 26px; top: 0px;">1<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 26px;">2<span style="display: inline-block; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 52px;">3<span style="display: inline-block; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 78px;">4<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 104px;">5<span class="ace_fold-widget ace_start ace_open" style="display: none; height: 26px;"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 130px;">6<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-active-line ace_gutter-cell " style="height: 26px; top: 156px;">7<span style="display: inline-block; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 182px;">8<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 208px;">9<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 234px;">10<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 260px;">11<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 286px;">12<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 312px;">13<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 338px;">14<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 364px;">15<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 390px;">16<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 416px;">17<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 442px;">18<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 468px;">19<span style="display: inline-block; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 494px;">20<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 520px;">21<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 546px;">22<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 572px;">23<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 598px;">24<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 624px;">25<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 650px;">26<span style="display: none; height: 26px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 26px; top: 676px;">27<span style="display: none;"></span></div></div></div><div class="ace_scroller" style="line-height: 26px; left: 57px; right: 17px; bottom: 0px;"><div class="ace_content" style="top: 0px; left: 0px; width: 1826px; height: 691px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 942px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height: 26px; top: 156px; left: 0px; right: 0px;"></div></div><div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px; top: 0px; left: 0px;"><div class="ace_line" style="height: 26px; top: 0px;"><span class="ace_xml-pe ace_doctype ace_xml">&lt;!</span><span class="ace_xml-pe ace_doctype ace_xml">DOCTYPE</span><span class="ace_text ace_whitespace ace_xml"> </span><span class="ace_xml-pe ace_xml">html</span><span class="ace_xml-pe ace_doctype ace_xml">&gt;</span></div><div class="ace_line" style="height: 26px; top: 26px;"><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">html</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">lang</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"ja"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height: 26px; top: 52px;"><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">head</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height: 26px; top: 78px;"><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">meta</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">charset</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"UTF-8"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height: 26px; top: 104px;"><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">title</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">mission_5-2</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">title</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height: 26px; top: 130px;"><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">head</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height: 26px; top: 156px;"><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">body</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height: 26px; top: 182px;"><span class="ace_support ace_php_tag">&lt;?php</span></div><div class="ace_line" style="height: 26px; top: 208px;"><span class="ace_comment">//DB<span class="ace_cjk" style="width: 23.4531px;">接</span><span class="ace_cjk" style="width: 23.4531px;">続</span><span class="ace_cjk" style="width: 23.4531px;">設</span><span class="ace_cjk" style="width: 23.4531px;">定</span></span></div><div class="ace_line" style="height: 26px; top: 234px;"><span class="ace_comment">//<span class="ace_cjk" style="width: 23.4531px;">デ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">タ</span><span class="ace_cjk" style="width: 23.4531px;">ベ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">ス</span><span class="ace_cjk" style="width: 23.4531px;">（</span><span class="ace_cjk" style="width: 23.4531px;">情</span><span class="ace_cjk" style="width: 23.4531px;">報</span><span class="ace_cjk" style="width: 23.4531px;">の</span><span class="ace_cjk" style="width: 23.4531px;">塊</span><span class="ace_cjk" style="width: 23.4531px;">）</span><span class="ace_cjk" style="width: 23.4531px;">を</span><span class="ace_cjk" style="width: 23.4531px;">作</span><span class="ace_cjk" style="width: 23.4531px;">成</span></span></div><div class="ace_line" style="height: 26px; top: 260px;"><span class="ace_variable">$dsn</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">'<span class="ace_cjk" style="width: 23.4531px;">デ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">タ</span><span class="ace_cjk" style="width: 23.4531px;">ベ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">ス</span><span class="ace_cjk" style="width: 23.4531px;">名</span>'</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 26px; top: 286px;">    <span class="ace_variable">$user</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">'<span class="ace_cjk" style="width: 23.4531px;">ユ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">ザ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">名</span>'</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 26px; top: 312px;">    <span class="ace_variable">$password</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">'<span class="ace_cjk" style="width: 23.4531px;">パ</span><span class="ace_cjk" style="width: 23.4531px;">ス</span><span class="ace_cjk" style="width: 23.4531px;">ワ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">ド</span>'</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 26px; top: 338px;">    <span class="ace_comment">//MySQL<span class="ace_cjk" style="width: 23.4531px;">の</span><span class="ace_cjk" style="width: 23.4531px;">デ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">タ</span><span class="ace_cjk" style="width: 23.4531px;">ベ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">ス</span><span class="ace_cjk" style="width: 23.4531px;">に</span><span class="ace_cjk" style="width: 23.4531px;">接</span><span class="ace_cjk" style="width: 23.4531px;">続</span></span></div><div class="ace_line" style="height: 26px; top: 364px;">    <span class="ace_variable">$pdo</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_support ace_class">PDO</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable">$dsn</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_variable">$user</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_variable">$password</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword">array</span><span class="ace_paren ace_lparen">(</span><span class="ace_support ace_class">PDO</span><span class="ace_keyword ace_operator">::</span><span class="ace_identifier">ATTR_ERRMODE</span> <span class="ace_keyword ace_operator">=&gt;</span> <span class="ace_support ace_class">PDO</span><span class="ace_keyword ace_operator">::</span><span class="ace_identifier">ERRMODE_WARNING</span><span class="ace_paren ace_rparen">))</span><span class="ace_punctuation ace_operator">;</span><span class="ace_comment">/*<span class="ace_cjk" style="width: 23.4531px;">不</span><span class="ace_cjk" style="width: 23.4531px;">具</span><span class="ace_cjk" style="width: 23.4531px;">合</span><span class="ace_cjk" style="width: 23.4531px;">が</span><span class="ace_cjk" style="width: 23.4531px;">あ</span><span class="ace_cjk" style="width: 23.4531px;">っ</span><span class="ace_cjk" style="width: 23.4531px;">た</span><span class="ace_cjk" style="width: 23.4531px;">時</span><span class="ace_cjk" style="width: 23.4531px;">に</span><span class="ace_cjk" style="width: 23.4531px;">見</span><span class="ace_cjk" style="width: 23.4531px;">つ</span><span class="ace_cjk" style="width: 23.4531px;">け</span><span class="ace_cjk" style="width: 23.4531px;">る</span><span class="ace_cjk" style="width: 23.4531px;">た</span><span class="ace_cjk" style="width: 23.4531px;">め</span><span class="ace_cjk" style="width: 23.4531px;">に</span>PDO<span class="ace_cjk" style="width: 23.4531px;">の</span><span class="ace_cjk" style="width: 23.4531px;">エ</span><span class="ace_cjk" style="width: 23.4531px;">ラ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">レ</span><span class="ace_cjk" style="width: 23.4531px;">ポ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">ト</span><span class="ace_cjk" style="width: 23.4531px;">を</span><span class="ace_cjk" style="width: 23.4531px;">表</span><span class="ace_cjk" style="width: 23.4531px;">示</span>*/</span></div><div class="ace_line" style="height: 26px; top: 390px;"></div><div class="ace_line" style="height: 26px; top: 416px;"><span class="ace_comment">//SQL<span class="ace_cjk" style="width: 23.4531px;">文</span><span class="ace_cjk" style="width: 23.4531px;">を</span><span class="ace_cjk" style="width: 23.4531px;">使</span><span class="ace_cjk" style="width: 23.4531px;">っ</span><span class="ace_cjk" style="width: 23.4531px;">て</span><span class="ace_cjk" style="width: 23.4531px;">デ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">タ</span><span class="ace_cjk" style="width: 23.4531px;">ベ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">ス</span><span class="ace_cjk" style="width: 23.4531px;">内</span><span class="ace_cjk" style="width: 23.4531px;">に</span><span class="ace_cjk" style="width: 23.4531px;">テ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">ブ</span><span class="ace_cjk" style="width: 23.4531px;">ル</span><span class="ace_cjk" style="width: 23.4531px;">を</span><span class="ace_cjk" style="width: 23.4531px;">作</span><span class="ace_cjk" style="width: 23.4531px;">成</span></span></div><div class="ace_line" style="height: 26px; top: 442px;"> <span class="ace_variable">$sql</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">"CREATE TABLE IF NOT EXISTS tbm5"</span></div><div class="ace_line" style="height: 26px; top: 468px;">    .<span class="ace_string">" ("</span></div><div class="ace_line" style="height: 26px; top: 494px;">    . <span class="ace_string">"id INT AUTO_INCREMENT PRIMARY KEY,"</span><span class="ace_comment">/*AUTO_INCREMENT<span class="ace_cjk" style="width: 23.4531px;">。</span><span class="ace_cjk" style="width: 23.4531px;">デ</span><span class="ace_cjk" style="width: 23.4531px;">ー</span><span class="ace_cjk" style="width: 23.4531px;">タ</span><span class="ace_cjk" style="width: 23.4531px;">を</span><span class="ace_cjk" style="width: 23.4531px;">追</span><span class="ace_cjk" style="width: 23.4531px;">加</span><span class="ace_cjk" style="width: 23.4531px;">し</span><span class="ace_cjk" style="width: 23.4531px;">た</span><span class="ace_cjk" style="width: 23.4531px;">時</span><span class="ace_cjk" style="width: 23.4531px;">に</span><span class="ace_cjk" style="width: 23.4531px;">カ</span><span class="ace_cjk" style="width: 23.4531px;">ラ</span><span class="ace_cjk" style="width: 23.4531px;">ム</span><span class="ace_cjk" style="width: 23.4531px;">に</span><span class="ace_cjk" style="width: 23.4531px;">対</span><span class="ace_cjk" style="width: 23.4531px;">し</span><span class="ace_cjk" style="width: 23.4531px;">て</span><span class="ace_cjk" style="width: 23.4531px;">現</span><span class="ace_cjk" style="width: 23.4531px;">在</span><span class="ace_cjk" style="width: 23.4531px;">格</span><span class="ace_cjk" style="width: 23.4531px;">納</span><span class="ace_cjk" style="width: 23.4531px;">さ</span><span class="ace_cjk" style="width: 23.4531px;">れ</span><span class="ace_cjk" style="width: 23.4531px;">て</span><span class="ace_cjk" style="width: 23.4531px;">い</span><span class="ace_cjk" style="width: 23.4531px;">る</span><span class="ace_cjk" style="width: 23.4531px;">最</span><span class="ace_cjk" style="width: 23.4531px;">大</span><span class="ace_cjk" style="width: 23.4531px;">の</span><span class="ace_cjk" style="width: 23.4531px;">数</span><span class="ace_cjk" style="width: 23.4531px;">値</span><span class="ace_cjk" style="width: 23.4531px;">に</span> 1 <span class="ace_cjk" style="width: 23.4531px;">を</span><span class="ace_cjk" style="width: 23.4531px;">追</span><span class="ace_cjk" style="width: 23.4531px;">加</span><span class="ace_cjk" style="width: 23.4531px;">し</span><span class="ace_cjk" style="width: 23.4531px;">た</span><span class="ace_cjk" style="width: 23.4531px;">数</span><span class="ace_cjk" style="width: 23.4531px;">値</span><span class="ace_cjk" style="width: 23.4531px;">を</span><span class="ace_cjk" style="width: 23.4531px;">自</span><span class="ace_cjk" style="width: 23.4531px;">動</span><span class="ace_cjk" style="width: 23.4531px;">で</span><span class="ace_cjk" style="width: 23.4531px;">格</span><span class="ace_cjk" style="width: 23.4531px;">納</span>*/</span></div><div class="ace_line" style="height: 26px; top: 520px;">    . <span class="ace_string">"name char(32),"</span></div><div class="ace_line" style="height: 26px; top: 546px;">    . <span class="ace_string">"comment TEXT,"</span></div><div class="ace_line" style="height: 26px; top: 572px;">    .<span class="ace_string">"date DATETIME,"</span></div><div class="ace_line" style="height: 26px; top: 598px;">    .<span class="ace_string">"password char(32)"</span></div><div class="ace_line" style="height: 26px; top: 624px;">    .<span class="ace_string">");"</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height: 26px; top: 650px;"><span class="ace_indent-guide">    </span> <span class="ace_variable">$stmt</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_variable">$pdo</span><span class="ace_keyword ace_operator">-&gt;</span><span class="ace_identifier">query</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable">$sql</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors" style=""><div class="ace_cursor" style="display: block; top: 156px; left: 74px; width: 12px; height: 26px; animation-duration: 1000ms;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 22px; bottom: 17px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 4888px;">&nbsp;</div></div><div class="ace_scrollbar ace_scrollbar-h" style="height: 22px; left: 57px; right: 17px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 1826px;">&nbsp;</div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">הההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההה</div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></div></div></div> <div role="dialog" class="v-dialog__container"></div> <div role="dialog" class="v-dialog__container"><!----></div> <div role="dialog" class="v-dialog__container"><!----></div> <!----> <!----> <!----> <!----></div></main></div><div role="menu" class="v-menu__content theme--light" style="min-width: 36px; top: 358px; left: 183px; transform-origin: left top; z-index: 8; display: none;"> <div class="v-list v-sheet theme--light"><div tabindex="0" role="menuitem" id="list-item-115" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-note-plus-outline theme--light"></i></div> <div class="v-list-item__title">new file</div></div> <div tabindex="0" role="menuitem" id="list-item-117" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder-plus-outline theme--light"></i></div> <div class="v-list-item__title">new folder</div></div> <div tabindex="0" role="menuitem" id="list-item-119" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-up-bold-circle theme--light"></i></div> <div class="v-list-item__title">upload</div></div> <!----> <div tabindex="0" role="menuitem" id="list-item-121" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder-move-outline theme--light"></i></div> <div class="v-list-item__title">move folder</div></div> <div tabindex="0" role="menuitem" id="list-item-123" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-fountain-pen-tip theme--light"></i></div> <div class="v-list-item__title">rename</div></div> <div tabindex="0" role="menuitem" id="list-item-125" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-trash-can-outline theme--light"></i></div> <div class="v-list-item__title">delete</div></div></div></div><div role="document" class="v-dialog__content" style="z-index: 202;"><div class="v-dialog" style="transform-origin: center center; width: 30vw; display: none;"><div class="v-card v-sheet theme--light rounded-0" style="overflow: hidden;"><div class="v-card__title headline">新しいファイルを作成</div> <div class="v-input theme--light v-text-field v-text-field--is-booted"><div class="v-input__control"><div class="v-input__slot"><div class="v-text-field__slot"><label for="input-131" class="v-label theme--light" style="left: 0px; right: auto; position: absolute;">File Name</label><input id="input-131" type="text"></div></div><div class="v-text-field__details"><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div> <div class="v-card__actions"><div class="spacer"></div> <button type="button" class="v-btn v-btn--text theme--light v-size--default green--text text--darken-1"><span class="v-btn__content">キャンセル</span></button> <button type="button" class="v-btn v-btn--text theme--light v-size--default green--text text--darken-1"><span class="v-btn__content">作成</span></button></div></div></div></div><div role="menu" class="v-menu__content theme--light menuable__content__active" style="min-width: 36px; top: 468px; left: 183px; transform-origin: left top; z-index: 8;"> <div class="v-list v-sheet theme--light"><!----> <!----> <!----> <div tabindex="0" role="menuitem" id="list-item-154" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-down-bold-circle theme--light"></i></div> <div class="v-list-item__title">download</div></div> <div tabindex="0" role="menuitem" id="list-item-156" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-file-move-outline theme--light"></i></div> <div class="v-list-item__title">move file</div></div> <div tabindex="0" role="menuitem" id="list-item-158" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-fountain-pen-tip theme--light"></i></div> <div class="v-list-item__title">rename</div></div> <div tabindex="0" role="menuitem" id="list-item-160" class="v-list-item v-list-item--link theme--light"><div class="v-list-item__icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-trash-can-outline theme--light"></i></div> <div class="v-list-item__title">delete</div></div></div></div></div> <div style="display: none;"><h1>Loginしてください</h1> <a href="https://portal.tech-base.net/" class="v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default"><span class="v-btn__content">ポータルサイト</span></a></div></div>
+    
+
+<!-- 本番バージョン、サイズと速度のために最適化されています -->
+<script src="./mission5_2.php_files/vue.js.ダウンロード"></script>
+<script src="./mission5_2.php_files/vuetify.js.ダウンロード"></script>
+<script>
+    new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: {
+            isLogin:false,
+            dirList:[],
+            directoryList:[],
+            itemForShare: null,
+            selectedBody:'',
+            selectedItem:null,
+            selectedPath:'',
+            moveToDirectory:null,
+            inputFileName:'',
+            inputDirectoryName:'',
+            uploadedFile:null,
+            createFileDialog:false,
+            createDirectoryDialog:false,
+            uploadDialog:false,
+            deleteDialog:false,
+            moveDialog:false,
+            renameDialog:false,
+            tree:[],
+            editor: null,
+            snackbar: false,
+            snackMessage: '',
+            snackbarColor: 'white',
+            files: {
+                c: 'mdi-language-c',
+                cc: 'mdi-langage-cpp',
+                cpp: 'mdi-language-cpp',
+                cs: 'mdi-language-csharp',
+                css: 'mdi-language-css3',
+                f: 'mdi-language-fortran',
+                for: 'mdi-language-fortran',
+                go: 'mdi-language-go',
+                rs: 'mdi-language-rust',
+                swift: 'mdi-language-swift',
+                hs: 'mdi-language-haskell',
+                java: 'mdi-language-java',
+                kt: 'mdi-language-kotlin',
+                lua: 'mdi-language-lua',
+                html: 'mdi-language-html5',
+                php: 'mdi-language-php',
+                py: 'mdi-language-python',
+                r: 'mdi-language-r',
+                rb: 'mdi-language-ruby',
+                js: 'mdi-language-javascript',
+                ts: 'mdi-language-typescript',
+                json: 'mdi-code-json',
+                md: 'mdi-language-markdown',
+                pdf: 'mdi-file-pdf',
+                png: 'mdi-file-image',
+                jpg: 'mdi-file-image',
+                gif: 'mdi-gif',
+                bmp: 'mdi-file-image',
+                mp3: 'mdi-file-music',
+                wave: 'mdi-file-music',
+                mp4: 'mdi-movie',
+                json: 'mdi-code-json',
+                txt: 'mdi-file-document-outline',
+                xls: 'mdi-file-excel',
+                xaml: 'mdi-language-xaml',
+            },
+        },
+        methods: {
+            getDirectoryList(){
+                axios.get('getList.php')
+                .then((res)=>{
+                    this.dirList=res.data
+                    const list = JSON.parse(JSON.stringify(this.dirList))
+                    this.directoryList=this.folderOnly(list)
+                }).catch((e)=>{
+                    if(e.response.status==404){
+                        this.snackMessage='APIが見つかりません'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }else{
+                        this.snackMessage='ディレクトリツリーの取得に失敗しました'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }
+                })
+            },
+            getBody(tree){
+                if(tree.length!=0){
+                    this.itemForShare=tree[0]
+                    if(tree[0].type!=='folder'){
+                        const path = tree[0].path
+                            axios.get('getBody.php',{
+                                params:{
+                                    path: path
+                                }
+                            })
+                            .then((res)=>{
+                                this.selectedItem=tree[0]
+                                this.editor?.setValue(res.data)
+                            }).catch((e)=>{
+                                if(e.response.status==400){
+                                    this.snackMessage='API要求に誤りがあります'
+                                    this.snackbarColor="red lighten-1"
+                                    this.snackbar=true
+                                }else if(e.response.status==500){
+                                    this.snackMessage='ファイルの中身を取得できませんでした'
+                                    this.snackbarColor="red lighten-1"
+                                    this.snackbar=true
+                                }else if(e.response.status==404){
+                                    this.snackMessage='APIが見つかりません'
+                                    this.snackbarColor="red lighten-1"
+                                    this.snackbar=true
+                                }
+                            })
+                    }
+                }
+            },
+            download(item){
+                axios.get('getBody.php',{
+                    params:{
+                        path: item.path
+                    }
+                })
+                .then((res)=>{
+                    const blob = new Blob([res.data], { type: "type/plain" });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    document.body.appendChild(a);
+                    a.download = item.name;
+                    a.href = url;
+                    a.click();
+                    a.remove();
+                    URL.revokeObjectURL(url);
+                    this.snackMessage='ダウンロードに成功しました'
+                    this.snackbarColor="green lighten-1"
+                    this.snackbar=true
+                }).catch((e)=>{
+                    if(e.response.status==400){
+                        this.snackMessage='API要求に誤りがあります'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }else if(e.response.status==500){
+                        this.snackMessage='ファイルの中身を取得できませんでした'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }else if(e.response.status==404){
+                        this.snackMessage='APIが見つかりません'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }
+                })
+            },
+            run(){
+                if(this.selectedItem!==null){
+                    window.open(this.selectedItem.path, "_blank");
+                    this.getDirectoryList()
+                }
+            },
+            preCreateFile(path){
+                if(path!==""){
+                    this.selectedPath=path
+                }else{
+                    this.selectedPath=''
+                }
+                this.createFileDialog=true
+            },
+            createFileName(){
+                path='../'
+                if(this.selectedPath!==''){
+                    path=this.selectedPath+'/'
+                }
+                const params = new URLSearchParams()
+                params.append('path', path)
+                params.append('name', this.inputFileName)
+                axios.post('createFile.php',params).then(()=>{
+                    this.getDirectoryList()
+                    this.inputFileName=''
+                    this.createFileDialog=false
+                    this.snackMessage='作成に成功しました'
+                    this.snackbarColor="green lighten-1"
+                    this.snackbar=true
+                }).error((e)=>{
+                    if(e.response.status==400){
+                        this.snackMessage='API要求に誤りがあります'
+                        this.snackbarColor="red lighten-1"
+                        this.createFileDialog=false
+                        this.snackbar=true
+                        this.inputFileName=''
+                    }else if(e.response.status==406){
+                        this.snackMessage=this.inputFileName+' は既に存在します'
+                        this.snackbarColor="red lighten-1"
+                        this.createFileDialog=false
+                        this.snackbar=true
+                        this.inputFileName=''
+                    }else if(e.response.status==500){
+                        this.snackMessage='ファイルの作成に失敗しました'
+                        this.snackbarColor="red lighten-1"
+                        this.createFileDialog=false
+                        this.snackbar=true
+                        this.inputFileName=''
+                    }else if(e.response.status==404){
+                        this.snackMessage='APIが見つかりません'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }
+                })
+            },
+            preCreateDirectory(path){
+                if(path!==""){
+                    this.selectedPath=path
+                }else{
+                    this.selectedPath=''
+                }
+                this.createDirectoryDialog=true
+            },
+            createDirectoryName(){
+                path='../'
+                if(this.selectedPath!==''){
+                    path=this.selectedPath+'/'
+                }
+                const params = new URLSearchParams()
+                params.append('path', path)
+                params.append('name', this.inputDirectoryName)
+                axios.post('createDirectory.php',params).then(()=>{
+                    this.getDirectoryList()
+                    this.inputDirectoryName=''
+                    this.createDirectoryDialog=false
+                    this.snackMessage='作成に成功しました'
+                    this.snackbarColor="green lighten-1"
+                    this.snackbar=true
+                }).catch((e)=>{
+                    if(e.response.status==400){                    
+                        this.inputDirectoryName=''
+                        this.createDirectoryDialog=false
+                        this.snackMessage='API要求に誤りがあります'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }else if(e.response.status==406){
+                        this.createDirectoryDialog=false
+                        this.snackMessage=this.inputDirectoryName+' は既に存在します'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                        this.inputDirectoryName=''
+                    }else if(e.response.status==500){
+                        this.createDirectoryDialog=false
+                        this.snackMessage='ディレクトリの作成に失敗しました'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                        this.inputDirectoryName=''
+                    }else if(e.response.status==404){
+                        this.snackMessage='APIが見つかりません'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }
+                })
+            },
+            preUpload(path){
+                if(path!==""){
+                    this.selectedPath=path
+                }else{
+                    this.selectedPath=''
+                }
+                this.uploadDialog=true
+            },
+            upload() {
+                path='../'
+                if(this.selectedPath!==''){
+                    path=this.selectedPath+'/'
+                }
+                let formData = new FormData()
+                formData.append("file", this.uploadedFile)
+                formData.append("path", path)
+                axios.post("upload.php", formData, {
+                    headers: { "content-type": "multipart/form-data" },
+                })
+                .then((res) => {
+                    this.uploadDialog = false
+                    this.uploadedFile = null
+                    this.getDirectoryList()
+                    this.snackMessage='アップロードに成功しました'
+                    this.snackbarColor="green lighten-1"
+                    this.snackbar=true
+                })
+                .catch((e) => {
+                    if(e.response.status==400){
+                        this.uploadDialog = false
+                        this.uploadedFile = null
+                        this.snackMessage='API要求に誤りがあります'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }else if(e.response.status==406){
+                        this.uploadDialog = false
+                        this.uploadedFile = null
+                        this.snackMessage='既に存在しています'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }else if(e.response.status==500){
+                        this.uploadDialog = false
+                        this.uploadedFile = null
+                        this.snackMessage='アップロードに失敗しました'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }else if(e.response.status==404){
+                        this.snackMessage='APIが見つかりません'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }
+                })
+            },
+            save(){
+                if(this.selectedItem!==null){
+                    const path=this.selectedItem.path
+                    const editor = ace.edit("editor")
+                    const body=editor.getValue()
+                    const params = new URLSearchParams()
+                    params.append('path', path)
+                    params.append('body', body)
+                    axios.post('save.php', params).then(()=>{
+                        this.getDirectoryList()
+                        this.snackMessage='保存に成功しました'
+                        this.snackbarColor="green lighten-1"
+                        this.snackbar=true
+                    }).catch((e)=>{
+                        if(e.response.status==400){
+                            this.snackMessage='API要求に誤りがあります'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true
+                        }else if(e.response.status==406){
+                            this.snackMessage=this.selectedItem.name+' は存在しません'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true
+                        }else if(e.response.status==500){
+                            this.snackMessage='内容の保存に失敗しました'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true
+                        }else if(e.response.status==404){
+                            this.snackMessage='APIが見つかりません'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true
+                        }
+                    })
+                }
+            },
+            preDeleteData(item){
+                this.deleteDialog=true
+                this.selectedItem=item
+            },
+            deleteData(){
+                const isFile = this.selectedItem.type !== 'folder'
+                const params = new URLSearchParams()
+                params.append('path', this.selectedItem.path)
+                params.append('is_file', isFile)
+                axios.post('delete.php', params).then(()=>{
+                    this.deleteDialog=false
+                    this.selectedItem=null
+                    this.getDirectoryList()
+                    this.snackMessage='削除に成功しました'
+                    this.snackbarColor="green lighten-1"
+                    this.snackbar=true
+                }).catch((e)=>{
+                    if(e.response.status==400){
+                        this.deleteDialog=false
+                        this.snackMessage='API要求に誤りがあります'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                        this.selectedItem=null
+                    }else if(e.response.status==406){
+                        this.deleteDialog=false
+                        this.snackMessage=this.selectedItem.name+' は存在しません'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                        this.selectedItem=null
+                    }else if(e.response.status==500){
+                        this.deleteDialog=false
+                        this.snackMessage='削除に失敗しました'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true 
+                        this.selectedItem=null
+                    }else if(e.response.status==404){
+                        this.snackMessage='APIが見つかりません'
+                        this.snackbarColor="red lighten-1"
+                        this.snackbar=true
+                    }
+                })
+            },
+            preMove(item){
+                if(this.directoryList.length>0){
+                    this.moveToDirectory={name:'root', path:'../'}
+                    this.moveDialog=true
+                    this.selectedItem=item
+                }
+            },
+            folderOnly(item){
+                // item.forEach((item)=>{console.log(item.name)})
+                return item.filter(item=>item.type==='folder')
+                    .map((item)=>{
+                        if("children" in item){
+                            item.children=this.folderOnly(item.children)
+                        }
+                        return item
+                    })
+            },
+            moveData(){
+                if(this.selectedItem.path===this.moveToDirectory.path){
+                    this.moveDialog=false
+                    this.snackMessage='移動元と移動先が同じです'
+                    this.snackbarColor="red lighten-1"
+                    this.snackbar=true
+                    this.selectedItem=null
+                }else{
+                    const newPath=this.moveToDirectory.path+'/'+this.selectedItem.name
+                    const params = new URLSearchParams()
+                    params.append('old_path', this.selectedItem.path)
+                    params.append('new_path', newPath)
+                    axios.post('move.php',params).then(()=>{
+                        this.selectedItem=null
+                        this.moveDialog=false
+                        this.getDirectoryList()
+                        this.snackMessage='移動に成功しました'
+                        this.snackbarColor="green lighten-1"
+                        this.snackbar=true
+                    }).catch((e)=>{
+                        if(e.response.status==400){
+                            this.moveDialog=false
+                            this.snackMessage='API要求に誤りがあります'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true
+                            this.selectedItem=null
+                        }else if(e.response.status==406){
+                            this.moveDialog=false
+                            this.snackMessage=this.selectedItem.name+' は既に存在します'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true
+                            this.selectedItem=null
+                        }else if(e.response.status==500){
+                            this.moveDialog=false
+                            this.snackMessage='移動に失敗しました'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true
+                            this.selectedItem=null
+                        }else if(e.response.status==404){
+                            this.snackMessage='APIが見つかりません'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true
+                        }
+                    })
+                }
+            },
+            isImage(){
+                if(this.selectedItem==null){return false}
+                else{
+                    if(this.selectedItem.type=='png'){return true}
+                    if(this.selectedItem.type=='jpg'){return true}
+                    if(this.selectedItem.type=='gif'){return true}
+                    if(this.selectedItem.type=='bmp'){return true}
+                }
+                return false
+            },
+            preRename(item){
+                this.selectedItem=item
+                this.renameDialog=true
+            },  
+            rename(){
+                const params = new URLSearchParams()
+                params.append('old_path',this.selectedItem.path)
+                params.append('new_name', this.inputFileName)
+                    axios.post('rename.php',params).then(()=>{
+                        this.selectedItem=null
+                        this.inputFileName=''
+                        this.renameDialog=false
+                        this.getDirectoryList()
+                        this.snackMessage='名前の変更に成功しました'
+                        this.snackbarColor="green lighten-1"
+                        this.snackbar=true
+                    }).catch((e)=>{
+                        if(e.response.status==400){
+                            this.selectedItem=null
+                            this.inputFileName=''
+                            this.renameDialog=false
+                            this.snackMessage='API要求に誤りがあります'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true
+                        }else if(e.response.status==406){
+                            this.selectedItem=null
+                            this.inputFileName=''
+                            this.renameDialog=false
+                            this.snackMessage=this.selectedItem.name + ' は存在しています'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true   
+                        }else if(e.response.status==500){
+                            this.selectedItem=null
+                            this.inputFileName=''
+                            this.renameDialog=false
+                            this.snackMessage='名前の変更に失敗しました'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true    
+                        }else if(e.response.status==404){
+                            this.snackMessage='APIが見つかりません'
+                            this.snackbarColor="red lighten-1"
+                            this.snackbar=true
+                        }
+                    })
+            },
+            share(){
+                if(this.itemForShare==null){
+                    this.snackMessage='ファイルを選択してください'
+                    this.snackbarColor="red lighten-1"
+                    this.snackbar=true    
+                }else{
+                    if(this.itemForShare.type=='folder'){
+                        const sharePath = this.itemForShare.path+'/'
+                        window.open('show_source.php?&dir='+sharePath, "_blank");
+                    }else{
+                        const sharePath = this.itemForShare.path.slice(0,-this.itemForShare.name.length)
+                        const file = this.itemForShare.name
+                        window.open('show_source.php?file='+file+'&dir='+sharePath, "_blank");
+                    }
+                }
+            }
+        },
+        mounted(){
+            const debug = location.search
+            // ポータルサイトが含まれるか探す正規表現を作る(大文字・小文字を区別しない)
+            const sStr = "^https?://portal.tech-base.net"
+            const rExp = new RegExp( sStr, "i" )
+            if(document.referrer.match(rExp)||debug==='?debug=true'){
+                this.isLogin=true
+                this.editor = ace.edit("editor")
+                this.editor.setFontSize('16pt')
+                this.editor.setTheme("ace/theme/twilight")
+                this.editor.session.setMode("ace/mode/php")
+                this.editor.setOptions({
+                    autoScrollEditorIntoView: true,
+                });
+                this.editor?.setValue(this.selectedBody)
+                this.getDirectoryList()
+                // this.editor.on("change", this.update);
+                this.loading=false
+            }
+        }
+    })
+</script>
+
+<style type="text/css" media="screen">
+    html{
+        overflow: hidden;   
+    }
+    #editor  { 
+        max-width: 66.6vw;
+        height: calc(100vh - 64px);
+        position: absolute;
+        margin: auto 0 0 auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    #img {
+        max-width: 66.6vw;
+        max-height: calc(100vh - 64px);
+        position: absolute;
+        margin: auto 0 0 auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style></body></html>
